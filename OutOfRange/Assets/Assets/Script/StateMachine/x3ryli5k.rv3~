@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RedState : BasicState
+{
+    public override void Enter(StateManager state)
+    {
+
+    }
+  public override void Update(StateManager state)
+    {
+
+    }
+   public override void Exit(StateManager state)
+    {
+
+    }
+
+}
