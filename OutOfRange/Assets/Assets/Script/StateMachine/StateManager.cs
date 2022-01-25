@@ -22,10 +22,7 @@ public BasicState CurrentState => _dic[ _enumState];
        _dic.Add(EnumState.RUN, _run);
        _dic.Add(EnumState.IDLE, _idle);
 
-
         _currentState = _idle;
-
-
         _currentState.Enter(this);
 
     }
@@ -52,6 +49,21 @@ public BasicState CurrentState => _dic[ _enumState];
         _enumState = state;
         
         CurrentState.Enter(this);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "CHIEN")
+        {
+            SwitchState(EnumState.RUN);
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "CHIEN")
+        {
+            SwitchState(EnumState.IDLE);
+        }
     }
 
 }

@@ -13,8 +13,7 @@ public class Idle : BasicState
     {
        
     }
-        
-        
+    
     public override void Exit(StateManager state)
     {
         Debug.Log("We exit the Idle");
