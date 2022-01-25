@@ -19,7 +19,10 @@ public class MouseChase : MonoBehaviour
     }
     private void Update()
     {
-        if (Physics.Raycast(_ray,_outhit)
+        if (Physics.Raycast(_ray, out _hit))
+        {
+            Debug.DrawLine(transform.position, _hit.point);
+        }
         _mousePositon = Input.mousePosition;
         _mousePositon = Camera.main.ViewportToScreenPoint(_mousePositon);
     }
