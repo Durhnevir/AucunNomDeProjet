@@ -7,7 +7,7 @@ public class CharacterController : MonoBehaviour
 {
     [SerializeField] private int _hpMax = 10;
     private event Action <float, int> _onHpChange = null;
-    public event Action<float,int> OnHpChange
+    public event Action <float,int> OnHpChange
     {
         add
         { 
